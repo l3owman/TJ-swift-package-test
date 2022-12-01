@@ -9,7 +9,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "TJ-swift-package-test",
-            targets: ["TJ-swift-package-test"]),
+            targets: ["Tapjoy"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -18,11 +18,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "TJ-swift-package-test",
-            dependencies: []),
-        .testTarget(
-            name: "TJ-swift-package-testTests",
-            dependencies: ["TJ-swift-package-test"]),
+        .binaryTarget(name: "Tapjoy", path: "Sources/TJ-swift-package-test/Tapjoy.xcframework"),
     ]
 )
